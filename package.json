@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "preinstall": "yarn global add ts-node typescript '@types/node'",
-    "start": "ts-node src/index.ts",
+    "preinstall": "yarn global add tsx",
+    "start": "tsx src/index.ts",
     "dev": "tsx watch src/index.ts",
     "db:generate": "drizzle-kit generate:pg --schema ./src/db/schema.ts --out=./src/db/migrations",
     "db:migrate": "tsx ./src/db/migrate.ts"
