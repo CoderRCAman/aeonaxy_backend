@@ -27,7 +27,7 @@ const signup = async (c) => {
         if (!(0, lodash_1.isEmpty)(user)) {
             c.status(400);
             return c.json({
-                message: "email already exist",
+                message: "email or username already exist",
                 success: false,
             });
         }
