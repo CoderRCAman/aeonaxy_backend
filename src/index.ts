@@ -11,17 +11,7 @@ const app = new Hono();
 app.use(logger());
 const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 4000;
 cloudinary.v2.config();
-app.use(
-  "/api/*",
-  cors({
-    origin: process.env.FRONTEND_API || "",
-    allowHeaders: ["Origin", "Content-Type", "Authorization"],
-    allowMethods: ["POST", "GET", "OPTIONS"],
-    exposeHeaders: ["Content-Length", "X-Kuma-Revision"],
-    maxAge: 600,
-    credentials: true,
-  })
-);
+app.use("/api/*", cors());
 serve({
   fetch: app.fetch,
   port,
