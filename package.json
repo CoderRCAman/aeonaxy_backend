@@ -4,7 +4,6 @@
     "dev": "tsx watch src/index.ts",
     "db:generate": "drizzle-kit generate:pg --schema ./src/db/schema.ts --out=./src/db/migrations",
     "db:migrate": "tsx ./src/db/migrate.ts"
-
   },
   "dependencies": {
     "@hono/node-server": "^1.9.0",
